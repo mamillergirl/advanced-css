@@ -1,3 +1,16 @@
+@keyframes duck_slide {
+  0% {
+    transform: translateX(90vw);
+  }
+
+
+
+  100% {
+    transform: translateX(-260vw) ; /* Moves the ducks down out of view */
+  }
+
+}
+
 #about {
   .settingStage {
     display: flex;
@@ -5,7 +18,38 @@
     justify-items: space-between;
     text-align: left;
   }
+  .container {
+    section {
+      ul {
+        display: flex;
+        gap: 4rem;
+        border-top: 20px solid saddlebrown;
+        border-bottom: 20px solid saddlebrown;
+        list-style: none;
+        background-image: url("./duck_banner.png");
+        // animation: duck_slide 60s linear infinite;
+        transform: translateX(-50vw);
 
+        li {
+          margin: 0;
+          background-image: url("./duck.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 200px;
+          height: 200px;
+          display: grid;
+          place-items: center;
+          text-align: center;
+          font-size: 30px;
+          cursor: pointer;
+
+          animation: duck_slide 30s linear infinite;
+         
+          
+        }
+      }
+    }
+  }
   section:nth-child(2) {
     position: relative;
 
