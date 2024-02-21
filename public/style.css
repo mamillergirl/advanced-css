@@ -366,7 +366,7 @@ nav ul li {
   #about section:nth-child(2)::before {
     transform: scale(2) translate(-25%, -25%);
   }
-
+}
 @media (max-width: 35rem) {
   #about .settingStage {
     display: flex;
@@ -375,7 +375,6 @@ nav ul li {
     text-align: left;
   }
 }
-
 
 #guidelines h3 {
   display: inline-block;
@@ -548,7 +547,7 @@ nav ul li {
 }
 @media (min-width: 515px) and (max-width: 765px) {
   #styles .features li:nth-last-child(1):nth-child(odd),
-  .features.patterned li:nth-last-child(1):nth-child(odd) {
+.features.patterned li:nth-last-child(1):nth-child(odd) {
     grid-column: span 2;
   }
 }
@@ -1026,4 +1025,3 @@ div.stand:after {
     margin-left: 30%;
   }
 }
-
