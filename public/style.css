@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
 :root {
   --color-primary: #B33333;
   --color-primary-alt: #29377B;
@@ -94,6 +95,7 @@ h1 {
 
 h2 {
   font-family: "Rye", serif;
+  font-family: "Rye", serif;
   font-size: var(--font-size-h2);
   font-size: clamp(2rem, 4vw, var(--font-size-h2));
   text-align: center;
@@ -118,6 +120,7 @@ h4 {
 
 p,
 li {
+  font-family: "Roboto Slab", sans-serif;
   font-family: "Roboto Slab", sans-serif;
   font-size: var(--font-size-text);
 }
@@ -195,7 +198,6 @@ blockquote::after {
     transform: translate(25%, 55%) rotate(-5deg);
   }
 }
-
 
 #guidelines p:nth-of-type(1),
 #contribute p:nth-of-type(1) {
@@ -289,7 +291,6 @@ header h1::before {
   color: #29377B;
   -webkit-text-stroke-width: 7px;
   -webkit-text-stroke-color: white;
-  -webkit-text-stroke-color: white;
 }
 header h1::after {
   content: "Style Stage";
@@ -355,14 +356,6 @@ nav ul li {
   list-style: none;
   background-image: url("./duck_banner.png");
   transform: translateX(-50vw);
-}
-#about .container section ul::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 #about .container section ul li {
   margin: 0;
@@ -430,13 +423,11 @@ nav ul li {
   }
 }
 
-
 #guidelines h3 {
   display: inline-block;
   transform: rotate(-8deg) translateX(-10%);
   background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
 }
-@supports (background-clip: text) or (-webkit-background-clip: text) {
 @supports (background-clip: text) or (-webkit-background-clip: text) {
   #guidelines h3 {
     -webkit-background-clip: text;
@@ -449,7 +440,6 @@ nav ul li {
     transform: rotate(-8deg) translateX(-30%);
   }
 }
-@supports (background-clip: text) or (-webkit-background-clip: text) {
 @supports (background-clip: text) or (-webkit-background-clip: text) {
   #guidelines p:nth-of-type(2) {
     position: relative;
@@ -747,7 +737,6 @@ nav ul li {
   }
 }
 
-
 .page-footer {
   --logomark-height: 2em;
   --logomark-padding: 0;
@@ -873,7 +862,6 @@ nav ul li {
     margin-left: 6rem;
   }
 }
-
 
 .link-github svg {
   width: 1em;
