@@ -199,6 +199,7 @@ blockquote::after {
   }
 }
 
+
 #guidelines p:nth-of-type(1),
 #contribute p:nth-of-type(1) {
   font-size: var(--font-size-h4);
@@ -290,6 +291,7 @@ header h1::before {
   width: 100%;
   color: #29377B;
   -webkit-text-stroke-width: 7px;
+  -webkit-text-stroke-color: white;
   -webkit-text-stroke-color: white;
 }
 header h1::after {
@@ -431,11 +433,13 @@ nav ul li {
   }
 }
 
+
 #guidelines h3 {
   display: inline-block;
   transform: rotate(-8deg) translateX(-10%);
   background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
 }
+@supports (background-clip: text) or (-webkit-background-clip: text) {
 @supports (background-clip: text) or (-webkit-background-clip: text) {
   #guidelines h3 {
     -webkit-background-clip: text;
@@ -448,6 +452,7 @@ nav ul li {
     transform: rotate(-8deg) translateX(-30%);
   }
 }
+@supports (background-clip: text) or (-webkit-background-clip: text) {
 @supports (background-clip: text) or (-webkit-background-clip: text) {
   #guidelines p:nth-of-type(2) {
     position: relative;
@@ -745,6 +750,7 @@ nav ul li {
   }
 }
 
+
 .page-footer {
   --logomark-height: 2em;
   --logomark-padding: 0;
@@ -870,6 +876,7 @@ nav ul li {
     margin-left: 6rem;
   }
 }
+
 
 .link-github svg {
   width: 1em;
