@@ -15,7 +15,7 @@
   --font-size-h2: 3rem;
   --font-size-h3: 2rem;
   --font-size-h4: 1.35rem;
-  --font-size-text: 1.15rem;
+  --font-size-text: 20px;
   --border-radius: 8px;
 }
 
@@ -70,6 +70,13 @@ select {
     scroll-behavior: auto !important;
   }
 }
+#main {
+  line-height: 1.5;
+}
+#main p {
+  max-width: 70ch;
+}
+
 h1,
 h2,
 h3,
@@ -522,6 +529,52 @@ nav ul li {
   font-size: clamp(1.5rem, 4vw, 2rem);
 }
 
+#guidelines {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 35rem) {
+  #guidelines {
+    flex-direction: row;
+  }
+  #guidelines::before {
+    content: url("/balloons.png");
+    width: 10%;
+    height: auto;
+    margin-left: 20px;
+    shape-outside: polygon(10px 10px, 20px 20px, 30px 30px);
+    animation: floatUpDown 3s infinite alternate;
+  }
+  #guidelines section {
+    max-width: 60ch;
+  }
+}
+@media screen and (max-width: 35rem) {
+  #guidelines {
+    flex-direction: column;
+  }
+  #guidelines::before {
+    content: url("/balloons.png");
+    width: auto;
+    height: auto;
+    float: none;
+    margin: auto;
+    animation: floatUpDown 3s infinite alternate;
+  }
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .features {
   position: relative;
   width: 100%;

@@ -1,0 +1,52 @@
+#guidelines {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    @media screen and (min-width: 35rem) {
+        flex-direction: row;
+
+        &::before {
+            content: url('/balloons.png');
+            width: 10%;
+            height: auto;
+            margin-left: 20px;
+            shape-outside: polygon(10px 10px, 20px 20px, 30px 30px);
+            animation: floatUpDown 3s infinite alternate;
+            
+        }
+        section {
+            max-width: 60ch;
+        }
+    }
+
+    @media screen and (max-width: 35rem) {
+        flex-direction: column;
+
+        &::before {
+            content: url('/balloons.png');
+            width: auto;
+            height: auto;
+            float: none; 
+            
+            margin: auto;
+            animation: floatUpDown 3s infinite alternate;
+
+        }
+    }
+
+   
+}
+
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0); // Start position
+    }
+    50% {
+        transform: translateY(-20px); // Mid position (float up)
+    }
+    100% {
+        transform: translateY(0); // End position (float down)
+    }
+}
