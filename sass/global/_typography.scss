@@ -1,3 +1,12 @@
+#main {
+  line-height: 1.5;
+
+  p {
+    max-width: 70ch;
+  }
+}
+
+
 h1,
 h2,
 h3,
@@ -19,6 +28,7 @@ h2 {
   font-size: clamp(2rem, 4vw, var(--font-size-h2));
   text-align: center;
 }
+
 
 #main h2 {
   background-color: var(--color-secondary);
