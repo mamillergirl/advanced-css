@@ -15,7 +15,7 @@
   --font-size-h2: 3rem;
   --font-size-h3: 2rem;
   --font-size-h4: 1.35rem;
-  --font-size-text: 1.15rem;
+  --font-size-text: 20px;
   --border-radius: 8px;
 }
 
@@ -289,7 +289,6 @@ header h1::before {
   color: #29377B;
   -webkit-text-stroke-width: 7px;
   -webkit-text-stroke-color: white;
-  -webkit-text-stroke-color: white;
 }
 header h1::after {
   content: "Style Stage";
@@ -356,14 +355,8 @@ nav ul li {
   background-image: url("./duck_banner.png");
   transform: translateX(-50vw);
 }
-#about .container section ul::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+
+
 #about .container section ul li {
   margin: 0;
   background-image: url("./duck.png");
@@ -430,13 +423,11 @@ nav ul li {
   }
 }
 
-
 #guidelines h3 {
   display: inline-block;
   transform: rotate(-8deg) translateX(-10%);
   background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
 }
-@supports (background-clip: text) or (-webkit-background-clip: text) {
 @supports (background-clip: text) or (-webkit-background-clip: text) {
   #guidelines h3 {
     -webkit-background-clip: text;
@@ -449,7 +440,6 @@ nav ul li {
     transform: rotate(-8deg) translateX(-30%);
   }
 }
-@supports (background-clip: text) or (-webkit-background-clip: text) {
 @supports (background-clip: text) or (-webkit-background-clip: text) {
   #guidelines p:nth-of-type(2) {
     position: relative;
@@ -873,7 +863,6 @@ nav ul li {
     margin-left: 6rem;
   }
 }
-
 
 .link-github svg {
   width: 1em;
