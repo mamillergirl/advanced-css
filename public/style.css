@@ -15,7 +15,7 @@
   --font-size-h2: 3rem;
   --font-size-h3: 2rem;
   --font-size-h4: 1.35rem;
-  --font-size-text: 20px;
+  --font-size-text: 1.15rem;
   --border-radius: 8px;
 }
 
@@ -196,7 +196,6 @@ blockquote::after {
   }
 }
 
-
 #guidelines p:nth-of-type(1),
 #contribute p:nth-of-type(1) {
   font-size: var(--font-size-h4);
@@ -355,8 +354,14 @@ nav ul li {
   background-image: url("./duck_banner.png");
   transform: translateX(-50vw);
 }
-
-
+#about .container section ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 #about .container section ul li {
   margin: 0;
   background-image: url("./duck.png");
@@ -544,12 +549,14 @@ nav ul li {
     flex-direction: row;
   }
   #guidelines::before {
-    content: url("/balloons.png");
-    width: 10%;
-    height: auto;
-    margin-left: 20px;
-    shape-outside: polygon(10px 10px, 20px 20px, 30px 30px);
+    content: "";
+    background-image: url("/balloons.png");
+    width: 50vh;
+    height: 60vh;
+    float: left;
     animation: floatUpDown 3s infinite alternate;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
   #guidelines section {
     max-width: 60ch;
@@ -559,12 +566,14 @@ nav ul li {
   #guidelines {
     flex-direction: column;
   }
-  #guidelines::before {
-    content: url("/balloons.png");
-    width: auto;
-    height: auto;
-    float: none;
-    margin: auto;
+  #guidelines::after {
+    content: "";
+    background-image: url("/balloons.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 90vw;
+    height: 50vh;
+    float: left;
     animation: floatUpDown 3s infinite alternate;
   }
 }
@@ -736,7 +745,6 @@ nav ul li {
     margin-right: 0;
   }
 }
-
 
 .page-footer {
   --logomark-height: 2em;

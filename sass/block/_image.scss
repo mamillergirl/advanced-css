@@ -8,12 +8,14 @@
         flex-direction: row;
 
         &::before {
-            content: url('/balloons.png');
-            width: 10%;
-            height: auto;
-            margin-left: 20px;
-            shape-outside: polygon(10px 10px, 20px 20px, 30px 30px);
+            content: '';
+            background-image: url('/balloons.png');
+            width: 50vh;
+            height: 60vh;
+            float: left;
             animation: floatUpDown 3s infinite alternate;
+            background-size: contain;
+            background-repeat: no-repeat;
             
         }
         section {
@@ -24,13 +26,14 @@
     @media screen and (max-width: 35rem) {
         flex-direction: column;
 
-        &::before {
-            content: url('/balloons.png');
-            width: auto;
-            height: auto;
-            float: none; 
-            
-            margin: auto;
+        &::after {
+            content: '';
+            background-image: url('/balloons.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 90vw;
+            height: 50vh;
+            float: left;
             animation: floatUpDown 3s infinite alternate;
 
         }
