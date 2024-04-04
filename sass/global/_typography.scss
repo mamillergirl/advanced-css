@@ -20,10 +20,14 @@ h2 {
 }
 
 #main h2 {
-  background-color: var(--color-secondary);
+  background-image: url("./wood-sign.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background-color: var(--color-secondary);
   align-self: center;
   color: var(--color-background);
-  padding: 0.25em 0.5em;
+  padding: 20px;
+  // padding: 0.25em 0.5em;
 }
 
 h3 {
