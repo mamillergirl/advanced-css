@@ -11,18 +11,6 @@
   background-position: center -34px;
   color: var(--color-light);
 
-  &::before {
-    @include logomark;
-
-    position: absolute;
-    left: 50%;
-    width: 2em;
-    transform: translate(-50%, -100%);
-    background-color: var(--color-background);
-    color: var(--color-primary);
-    font-size: 3rem;
-    content: "S";
-  }
 
   p:first-child {
     margin-top: 3rem;

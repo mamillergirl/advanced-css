@@ -7,29 +7,57 @@ nav {
     padding: 0;
     list-style: none;
 
-    a {
-      display: inline-grid;
-      padding: 0.5rem;
-      color: var(--color-secondary);
-      font-size: 1.25rem;
-      text-decoration: none;
-
-      &::before {
-        width: 100%;
-        height: 0.33em;
-        background-color: var(--color-secondary);
-        opacity: 0.15;
-        content: "";
-      }
-
-      &:hover::before,
-      &:focus::before {
-        opacity: 1;
-      }
-    }
-
     li {
-      margin: 0.25rem;
+      position: relative;
+      background-image: url('https://clipart-library.com/images/kc85yM6zi.png');
+      background-size: cover;
+      background-repeat: no-repeat; 
+      background-position: center; 
+      border-radius: 10px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: #333;
+      text-align: center;
+      text-transform: uppercase;
+      width: 143px;
+      height: 45px;
+
+      a {
+        display: inline-block;
+        color: var(--color-primary);
+        padding: 0.5rem 0rem;
+        font-size: 1.25rem;
+        text-decoration: none;
+        position: relative;
+        z-index: 1;
+      }
+
+      a::before,
+      a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--color-secondary);
+        transition: width 0.3s ease-out;
+      }
+
+      a::before {
+        left: 50%;
+        transform: translateX(-100%);
+      }
+
+      a::after {
+        right: 50%;
+        transform: translateX(100%);
+      }
+
+      a:hover::before,
+      a:hover::after {
+        width: 50%;
+      }
     }
   }
 }

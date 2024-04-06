@@ -10,6 +10,7 @@
         &::before {
             content: '';
             background-image: url('/balloons.png');
+            margin-left: 5.5rem;
             width: 50vh;
             height: 60vh;
             float: left;
@@ -31,8 +32,9 @@
             background-image: url('/balloons.png');
             background-size: contain;
             background-repeat: no-repeat;
-            width: 90vw;
-            height: 50vh;
+            margin-left: 5.5rem;
+            width: 80vw;
+            height: 30vh;
             float: left;
             animation: floatUpDown 3s infinite alternate;
 
@@ -53,3 +55,46 @@
         transform: translateY(0); // End position (float down)
     }
 }
+
+
+#contribute .container:nth-of-type(2):first-child{
+
+    
+
+    @media screen and (min-width: 35rem) {
+      
+
+        &::before {
+            content: '';
+            background-image: url('/balloons.png');
+            margin-left: 5.5rem;
+            width: 50vh;
+            height: 60vh;
+            float: right;
+            background-size: contain;
+            background-repeat: no-repeat;
+            
+        }
+        section {
+            max-width: 60ch;
+        }
+    }
+
+    @media screen and (max-width: 35rem) {
+        flex-direction: column;
+
+        &::after {
+            content: '';
+            background-image: url('/balloons.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-left: 5.5rem;
+            width: 80vw;
+            height: 30vh;
+            float: left;
+        }
+    }
+
+   
+}
+
