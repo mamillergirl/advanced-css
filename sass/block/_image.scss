@@ -9,7 +9,7 @@
 
         &::before {
             content: '';
-            background-image: url('/balloons.png');
+            background-image: url('./balloons.png');
             margin-left: 5.5rem;
             width: 50vh;
             height: 60vh;
@@ -29,7 +29,7 @@
 
         &::after {
             content: '';
-            background-image: url('/balloons.png');
+            background-image: url('./balloons.png');
             background-size: contain;
             background-repeat: no-repeat;
             margin-left: 5.5rem;
@@ -55,46 +55,3 @@
         transform: translateY(0); // End position (float down)
     }
 }
-
-
-#contribute .container:nth-of-type(2):first-child{
-
-    
-
-    @media screen and (min-width: 35rem) {
-      
-
-        &::before {
-            content: '';
-            background-image: url('https://github.com/mamillergirl/advanced-css/blob/main/public/balloons.png?raw=true');
-            margin-left: 5.5rem;
-            width: 50vh;
-            height: 60vh;
-            float: right;
-            background-size: contain;
-            background-repeat: no-repeat;
-            
-        }
-        section {
-            max-width: 60ch;
-        }
-    }
-
-    @media screen and (max-width: 35rem) {
-        flex-direction: column;
-
-        &::after {
-            content: '';
-            background-image: url('/balloons.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            margin-left: 5.5rem;
-            width: 80vw;
-            height: 30vh;
-            float: left;
-        }
-    }
-
-   
-}
-
